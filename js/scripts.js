@@ -27,7 +27,7 @@ const getBMI = () => {
 	if (weightInput.value.match(re) && heightInput.value.match(re)) {
 		let weight = weightInput.valueAsNumber
 		let height = heightInput.valueAsNumber * 0.01
-		result.value = weight / Math.round(height * 2)
+		result.value = (weight / (height * 2)).toFixed(1)
 		error.textContent = ''
 	} else {
 		error.textContent = 'Please enter a valid number!'
