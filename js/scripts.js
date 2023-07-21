@@ -59,12 +59,14 @@ const removeActive = () => {
 	})
 }
 
-const changeBackgroundFn = () => {
-	if (body.classList.contains('yellow' || 'green' || 'red')) {
-		body.classList.remove('yellow')
-		body.classList.remove('green')
-		body.classList.remove('red')
-	}
+const bodyRemoveColor = () => {
+	body.classList.remove('yellow')
+	body.classList.remove('green')
+	body.classList.remove('red')
+}
+
+const bodyChangeColor = () => {
+	bodyRemoveColor()
 	if (0 < result.value && 18.5 > result.value) {
 		body.classList.add('yellow')
 	} else if (18.5 < result.value && result.value < 24.9) {
@@ -80,15 +82,16 @@ const clearFn = () => {
 	weightInput.value = ''
 	heightInput.value = ''
 	result.value = ''
+	error.textContent = ''
 	removeActive()
-	changeBackgroundFn()
+	bodyRemoveColor()
 }
 
 const allFunctions = () => {
 	removeActive()
 	getBMI()
 	showOnChart()
-	changeBackgroundFn()
+	bodyChangeColor()
 }
 
 const allListeners = () => {

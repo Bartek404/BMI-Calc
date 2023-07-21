@@ -12,7 +12,7 @@ html {
 body {
 	font-family: 'Akshar', sans-serif;
 	background-color: #d4d4d4;
-	height: 100vh;
+	height: 98vh;
 }
 
 .wrapper {
@@ -98,7 +98,7 @@ body {
 	input[type='number'] {
 		-moz-appearance: textfield;
 	}
-	
+
 	&-input {
 		display: flex;
 		flex-direction: column;
