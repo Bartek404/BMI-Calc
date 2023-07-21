@@ -38,10 +38,10 @@ const showOnChart = () => {
 	let li
 	if (result.value == 0) {
 		error.textContent = 'Please enter a valid number!'
-	} else if (18.5 > result.value) {
+	} else if (18.5 >= result.value) {
 		li = document.querySelector('ul :nth-child(1)')
 		li.classList.add('active')
-	} else if (18.5 < result.value && result.value < 24.9) {
+	} else if (18.5 <= result.value && result.value <= 24.9) {
 		li = document.querySelector('ul :nth-child(2)')
 		li.classList.add('active')
 	} else if (25 <= result.value && result.value <= 29.9) {
