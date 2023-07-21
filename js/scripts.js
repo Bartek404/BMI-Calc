@@ -69,7 +69,7 @@ const bodyChangeColor = () => {
 	bodyRemoveColor()
 	if (0 < result.value && 18.5 > result.value) {
 		body.classList.add('yellow')
-	} else if (18.5 < result.value && result.value < 24.9) {
+	} else if (18.5 <= result.value && result.value <= 24.9) {
 		body.classList.add('green')
 	} else if (25 <= result.value && result.value <= 29.9) {
 		body.classList.add('yellow')
